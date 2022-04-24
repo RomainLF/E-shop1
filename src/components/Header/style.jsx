@@ -4,47 +4,50 @@ export default styled.header`
   margin: O;
   box-sizing: border-box;
 
-  *, *::after, *::before {
+  *,
+  *::after,
+  *::before {
     margin: 0;
     box-sizing: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
-  li {
-    list-style: none;
-    a{
-      font-size: 11px;
-      text-transform: uppercase;
-    }
-  }
-  li:first-child{
-    display: none;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-  }
   .nav {
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 8.5vh;
+    width: 100vw;
     padding-left: 1rem;
-    padding-right: 1rem;
     background: white;
-    z-index: 99;
+    z-index: 9;
+    .nav__menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 1rem;
+      margin-right: 20vw;
+      .connect {
+        display: none;
+      }
+    }
+    .nav__brand {
+      text-transform: uppercase;
+      font-size: 1.8rem;
+    }
+    li {
+      list-style: none;
+      margin-right: 2vw;
+      :first-child {
+        display: none;
+      }
+      a {
+        font-size: 11px;
+        text-transform: uppercase;
+      }
+    }
   }
-  .nav__brand {
-    text-transform: uppercase;
-    font-size: 1.8rem;
-  }
-  .nav__menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    gap: 3rem;
-    z-index: 2;
-  }
-  .nav__toggler{
+  .nav__toggler {
     display: none;
   }
   .nav__toggler div {
@@ -54,56 +57,43 @@ export default styled.header`
     background: #6b6a6a;
     transition: 0.1s ease-in;
   }
-  .header_icons{
-    display: flex;
-    .loupe{
-      width: 35%;
-    }
-    }
-  }
-  .picto {
-    margin: 0.5vw;
-    width: 40%;
-  }
-  /*sc1 correspond au text de "se connecter" dans la navbar*/ 
-  .sc1{ 
-    margin-left: -0.5rem;
-    font-size: 15px;
-  }
-  /* Effet text dans la nav bar burger */
-  .connect{
-    display: flex;
-    background-color: #eaecf3;
-    height: 7vh;
-  }
-  .homme a, .femmes a, .enfants a, .maison a, .cadeaux a, .wor a, .services a, .preferes a, .magasins a, .fr a{
+  .homme a,
+  .femmes a,
+  .enfants a,
+  .maison a,
+  .cadeaux a,
+  .wor a,
+  .services a,
+  .preferes a,
+  .magasins a,
+  .fr a {
     transform: translateX(-270%);
   }
-  .nav__active .homme a{
+  .nav__active .homme a {
     transform: translateX(0%);
     transition: 0.3s ease-in;
   }
-  .nav__active .femmes a{
+  .nav__active .femmes a {
     transform: translateX(0%);
     transition: 0.4s ease-in;
   }
-  .nav__active .enfants a{
+  .nav__active .enfants a {
     transform: translateX(0%);
     transition: 0.5s ease-in;
   }
-  .nav__active .maison a{
+  .nav__active .maison a {
     transform: translateX(0%);
     transition: 0.6s ease-in;
   }
-  .nav__active .cadeaux a{
+  .nav__active .cadeaux a {
     transform: translateX(0%);
     transition: 0.7s ease-in;
   }
-  .nav__active .wor a{
+  .nav__active .wor a {
     transform: translateX(0%);
     transition: 0.8s ease-in;
   }
-  .nav__active .services a{
+  .nav__active .services a {
     transform: translateX(0%);
     transition: 0.9s ease-in;
   }
@@ -111,7 +101,7 @@ export default styled.header`
     transform: translateX(0%);
     transition: 1s ease-in;
   }
-  .nav__active .magasins a{
+  .nav__active .magasins a {
     transform: translateX(0%);
     transition: 1.1s ease-in;
   }
@@ -119,269 +109,144 @@ export default styled.header`
     transform: translateX(0%);
     transition: 1.2s ease-in;
   }
- //Config du click sur panier//
-  .panier__menu {
-    position: fixed;
-    z-index: 2;
-    top: 9.5vh;
-    right: 0;
-    height: 40vh;
-    width: 20vw;
-    background: white;
-    flex-direction: column;
-    transform: translateX(-3%);
-    transition: 0.2s ease-in;
-    justify-content: start;
-    border: 0.15rem solid #6b6a6a;
-    box-sizing: border-box;
-    border-radius: 1rem;
-    overflow: hidden;
-    .vlp{
-      background-color: #ece9e9;
-      height: 4vh;
-      width: 100%;
-      margin-top: 28vh;
-      display: flex;
-      justify-content: center;
-      font-size: 10px;
-      border-bottom-left-radius: 0.8rem;
-      border-bottom-right-radius: 0.8rem;
+
+  .header_icons {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 5vh;
+    width: 7%;
+    .picto {
+      width: 70%;
+    }
+    .correction {
+      //img loupe réduite
+      width: 50%;
     }
   }
-  .panier__active {
-    transform: translateX(100%);
-  }
-  .panier {
-    display: flex;
-    justify-content: center;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 38px;
-  }
-  .bleu{
+  //Nav bar bleu de la version mobile
+  .bleu {
     display: none;
   }
-  //Config du click sur la loupe//
-  .loupe__menu{
-    position: fixed;
-    top: 8.5vh;
-    right: 0;
-    height: 33vh;
-    width: 100vw;
-    background: #ffffff;
-    flex-direction: column;
-    transform: translateY(0%);
-    transition: 0.1s ease-in;
-    justify-content: center;
-    z-index: 0;
+  //config des liens
+  a {
+    text-decoration: none;
+    color: black;
+  }
 
-    .fullSearch {
-      background-color: white;
-      height: 8vh;
+  /* ---------MOBILE VERSION-------- */
+  /* ---------MOBILE VERSION-------- */
+  /* ---------MOBILE VERSION-------- */
+
+  @media screen and (max-width: 768px) {
+    .nav__toggler {
+      display: block;
+      cursor: pointer;
+    }
+    .nav {
+      .nav__brand {
+        margin-left: 5vw;
+        font-size: 1.2rem;
+      }
+    }
+    .nav__menu {
+      position: fixed;
+      top: 8.5vh;
+      left: 0;
+      height: 92vh;
+      width: 50vw;
+      background: white;
+      flex-direction: column;
+      transform: translateX(-100%);
+      transition: 0.2s ease-in;
+      justify-content: start;
       display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      input{
+      align-items: center;
+      justify-content: space-around;
+      gap: 1rem;
+      z-index: 2;
+      .connect {
+        display: flex;
+        background-color: #eaecf3;
+        height: 7vh;
+        .picto2 {
+          width: 7%;
+          margin: 2.3vw;
+          .sc1 {
+            /*sc1 correspond au text de "se connecter" dans la navbar*/
+            margin-left: -1rem;
+            font-size: 15px;
+          }
+        }
+      }
+      li {
         height: 5vh;
         width: 50vw;
-        border: none;
-        border-bottom: 2px solid #939eaa;
-        text-align: center;
-        ::placeholder {
-          font-size: 1.5em;
-          color: #939eaa;
-          text-align: center;
-          }
-        }
-      }
-      .loupe__category{
-        margin-top: 0.5vh;
-        background-color: white;
-        ul{
-          display: felx;
-          flex-direction: row;
-          justify-content: center;
-          margin-left: 0;
-          li {
-            width: 8vw;
-            height: 5vh;
-            margin: 1vw;
-            background-color: #ece9e9;
-            font-size: 12px;
-            color: #092858;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-radius: 25px;
-            :first-child {
-              background-color: #092858;
-              color: white;
-              display: flex;
-              justify-content: center;
-              border-radius: 25px;
-            }
-          }
-        }
-      }
-      .searchSuggestion{
-        background-color: white;
+        margin-right: 0;
         display: flex;
-        justify-content: center;
-        margin-top: 3vh;
-        ul{
-          display: flex;
-          align-items: center;
-          flex-direction: row;
-          li {
-            font-size: 14px;
-            margin: 7px;
-            margin-left: 15px;
-            color: #092858;
-            display: flex;
-            :first-child{
-              text-transform: uppercase;
-              display: flex;
-              color: #092858;
-              font-size: 16px;
-            }
-            img{
-              width: 10%;
-              height: 100%;
-              padding-right: 1vw;
+        align-items: center;
+        a {
+          margin-left: 1rem;
+          text-transform: uppercase;
+          font-size: 13px;
+          color: #363a4e;
+        }
+      }
+      .footerNav {
+        height: 15rem;
+        background-color: #041e3a;
+        li {
+          margin-top: 0.5rem;
+          a {
+            margin-left: 1rem;
+            font-size: 12px;
+            color: #d9dff1;
+            text-transform: none;
+            img {
+              margin-right: 0.5rem;
+              margin-bottom: -0.4rem;
             }
           }
         }
-      }
-    }
-  .loupe__active{
-    transform: translateY(-190%);
-  }
-
-  /* ---------MOBILE VERSION-------- */
-  /* ---------MOBILE VERSION-------- */
-  /* ---------MOBILE VERSION-------- */
-
-
-
-@media screen and (max-width: 768px){
-  .nav__brand{
-    margin-right: -55px;
-  }
-  .nav__toggler {
-    display: block;
-    cursor: pointer;
-  }
-  .nav__menu {
-    position: fixed;
-    top: 8.5vh;
-    left: 0;
-    height: 92vh;
-    width: 50vw;
-    background: white;
-    flex-direction: column;
-    transform: translateX(-100%);
-    transition: 0.2s ease-in;
-    justify-content: start;
-    gap:1rem;
-  }
-  .loupe__menu{
-    z-index: 2;
-    top: 1§vh;
-    .fullSearch{
-      input{
-        width: 80vw;
-      }
-    }
-    .loupe__category{
-      ul{
-        li{
-          width: 14vw;
-          height: 5vh;
+        .bleu {
+          display: flex;
+          background-color: #041e3a;
         }
       }
     }
-    .searchSuggestion{
-      justify-content: flex-start;
-    ul{
+    .header_icons {
+      width: 10%;
+      margin-right: 9vw;
+      .Loupe__picto {
+        margin-right: 5vw;
+      }
+      .picto {
+        width: 190%;
+      }
+      .correction {
+        width: 140%;
+      }
+      .compte__picto {
+        display: none;
+      }
+    }
+    li:first-child {
       display: flex;
-      flex-direction: column;
-      li{
-        img{
-          width: 5%;
-          height: 50%;
+    }
+    .nav__active {
+      transform: translateX(0%);
+    }
+    .toggle .line1 {
+      transform: rotate(-45deg) translate(-2px, 2.5px);
+    }
+    .toggle .line3 {
+      transform: rotate(45deg) translate(-2px, -2.5px);
+    }
+    .nav {
+      .nav__menu {
+        .connect {
+          display: flex;
         }
       }
     }
   }
-  }
-  .panier__menu {
-    height: 40vh;
-    width: 45vw;
-    top: 10vh;
-  }
-  ul{
-    margin: 0;
-  }
-  .panier{
-    margin: -10px;
-    font-size: 12px;
-  }
-  li {
-    height: 5vh;
-    width: 50vw;
-    display: flex;
-    align-items: center;
-  }
-  li:first-child{
-    display: flex;
-  }
-  a {
-    margin-left: 1rem;
-    text-transform: uppercase;
-    font-size: 13px;
-    color: #363a4e;
-  }
-  .picto a{
-    margin: 1vw;
-    width: 40%;
-  }
-  .picto { width: 35%; margin: 0.1vw;}
-  .picto2{
-    width: 5%;
-    margin: 2.3vw;
-  }
-  .bleu {
-    display: flex;
-    background-color: #041E3A;
-  }
-  .nav__active {
-    transform: translateX(0%);
-  }
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-2px, 2.5px);
-  }
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-2px, -2.5px);
-  }
-  .footerNav{
-    height: 15rem;
-    background-color: #041E3A;
-    li {
-      margin-top: 0.5rem;
-      a{
-        margin-left: 1rem;
-        font-size:12px;
-        color: #d9dff1;
-        text-transform: none;
-        img{
-          margin-right: 0.5rem;
-          margin-bottom: -0.4rem;
-        }
-      }
-    }
-  }
-  .compte{
-    display: none;
-  }
-}
-`
+`;
