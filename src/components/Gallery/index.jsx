@@ -7,11 +7,15 @@ import Style from './style';
 export default function Gallery() {
   return (
     <SGallery>
-      <img src={bg1} className='bg_1' />
-      <div className='title'>
-        <p>En phase avec les éléments.</p>
-        <div className='div_button'>Vestes impermeables Homme</div>
-        <div className='div_button'>Vestes impermeables Femme</div>
+      <div className='main'>
+        <img src={bg1} className='bg_1' alt='background_mobile' />
+        <div className='title'>
+          <p>En phase avec les éléments.</p>
+        </div>
+        <div className='main_category'>
+          <div className='div_button'>Vestes impermeables Homme</div>
+          <div className='div_button'>Vestes impermeables Femme</div>
+        </div>
       </div>
     </SGallery>
   );

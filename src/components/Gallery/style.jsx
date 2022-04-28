@@ -3,32 +3,38 @@ import styled from 'styled-components';
 export default styled.section`
   background-color: #d7e6d7;
   width: 100vw;
-  .bg_1{
-    width: 100%;
-    height: 100%;
-  }
-  .title{
-    position: relative;
-    bottom: 750px;
-    left: 50px;
-    background-color: ;
-    width: 53vw;
-    height: 25vh;
-    color: white;
-    font-size: 3.5rem;
-    p{
-
+  .main {
+    .bg_1 {
+      margin-top: 8.5vh;
+      width: 100%;
+      height: 100%;
     }
-    .div_button{
-      font-size: 0.8rem;
-      background-color: black;
-      margin: 1%;
+    .title {
+      position: relative;
+      bottom: 12em;
+      left: 0.6em;
+      width: 54vw;
+      height: 25vh;
+      color: white;
+      font-size: 2.2rem;
+    }
+    .main_category {
+      background-color: #ffffff;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      width: 35vw;
-      height: 5vh;
-      text-transform: uppercase;
+      .div_button {
+        font-size: 0.8rem;
+        background-color: black;
+        margin: 1%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75vw;
+        height: 5vh;
+        text-transform: uppercase;
+        color: #d7e6d7;
+      }
     }
   }
 `;

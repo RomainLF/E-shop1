@@ -41,7 +41,7 @@ export default function Header() {
         </a>
         <ul className={active}>
           <li className='connect'>
-            <img src={img} className='picto2' />
+            <img src={img} className='picto2' alt='img' />
             <a href='#' className='sc1'>
               Se connecter
             </a>
@@ -70,19 +70,19 @@ export default function Header() {
           <div className='footerNav'>
             <li className='preferes bleu'>
               <a href='#'>
-                <img src={imgcoeur} />
+                <img src={imgcoeur} alt='imgcoeur' />
                 Préférés
               </a>
             </li>
             <li className='magasins bleu'>
               <a href='#'>
-                <img src={imgplace} />
+                <img src={imgplace} alt='imgplace' />
                 Magasins
               </a>
             </li>
             <li className='fr bleu'>
               <a href='#'>
-                <img src={imgglobe} />
+                <img src={imgglobe} alt='imgglobe' />
                 FR Français
               </a>
             </li>
@@ -95,12 +95,12 @@ export default function Header() {
               setIsOpenSearch(!isOpenSearch);
             }}
           >
-            <img src={imgloupe} className='correction' />
+            <img src={imgloupe} alt='imgloupe' className='correction' />
             <NavSearch openSearch={isOpenSearch} />
           </div>
 
           <div className='compte__picto'>
-            <img src={img} className='picto' />
+            <img src={img} alt='img' className='picto' />
           </div>
 
           <div
@@ -109,7 +109,7 @@ export default function Header() {
               setIsOpen(!isOpen);
             }}
           >
-            <img src={img2} className='picto' />
+            <img src={img2} alt='img2' className='picto' />
             <NavPanier open={isOpen} />
           </div>
         </section>
