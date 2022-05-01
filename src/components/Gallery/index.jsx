@@ -2,6 +2,7 @@ import SGallery from './style';
 import React, { useState } from 'react';
 import img1 from '../pictures/pictos/northface.jpeg';
 import img2 from '../pictures/pictos/imgTNFbig.jpeg';
+import Carousel from './Carousel';
 import Style from './style';
 
 export default function Gallery() {
@@ -45,9 +46,7 @@ export default function Gallery() {
           <div className='div_button'>Vestes impermeables Homme</div>
           <div className='div_button'>Vestes impermeables Femme</div>
         </div>
-        <div className='second_category'>
-          <div></div>
-        </div>
+        <Carousel></Carousel>
       </div>
     </SGallery>
   );

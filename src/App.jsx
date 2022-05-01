@@ -6,10 +6,10 @@ import SGlobal from './style';
 function App() {
   return (
     <SGlobal>
-      <Header />  
+      <Header />
       <main>
-        <Gallery /> 
-      </main>  
+        <Gallery />
+      </main>
       <Footer />
     </SGlobal>
   );
