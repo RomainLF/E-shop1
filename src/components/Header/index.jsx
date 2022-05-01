@@ -8,6 +8,7 @@ import imgglobe from '../pictures/pictos/globe.png';
 import imgloupe from '../pictures/pictos/loupe.png';
 import NavPanier from './NavPanier/index.jsx';
 import NavSearch from './NavSearch/index.jsx';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [active, setActive] = useState('nav__menu');
@@ -35,10 +36,9 @@ export default function Header() {
           <div className='line1'></div>
           <div className='line3'></div>
         </div>
-        <a href='#' className='nav__brand'>
-          {' '}
-          Ralph Lauren
-        </a>
+        <Link to='/'>
+          <div className='nav__brand'> Ralph Lauren</div>
+        </Link>
         <ul className={active}>
           <li className='connect'>
             <img src={img} className='picto2' alt='img' />

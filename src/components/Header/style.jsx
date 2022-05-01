@@ -12,6 +12,7 @@ export default styled.header`
     font-family: Georgia, 'Times New Roman', Times, serif;
   }
   .nav {
+    margin-top: -3.6em;
     position: fixed;
     display: flex;
     align-items: center;

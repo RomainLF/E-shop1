@@ -1,15 +1,16 @@
 import Header from './components/Header/index';
 import Footer from './components/Footer/index';
-import Gallery from './components/Gallery/index';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home.jsx';
 import SGlobal from './style';
 
 function App() {
   return (
     <SGlobal>
       <Header />
-      <main>
-        <Gallery />
-      </main>
+      <Routes>
+        <Route path='/' element={<Home />} />
+      </Routes>
       <Footer />
     </SGlobal>
   );
