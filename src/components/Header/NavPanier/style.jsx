@@ -21,7 +21,7 @@ export default styled.div`
       background-color: #ece9e9;
       height: 4vh;
       width: 100%;
-      margin-top: 28vh;
+      margin-top: 35.5vh;
       display: flex;
       justify-content: center;
       font-size: 10px;

@@ -3,16 +3,8 @@ import styled from 'styled-components';
 export default styled.header`
   margin: O;
   box-sizing: border-box;
-
-  *,
-  *::after,
-  *::before {
-    margin: 0;
-    box-sizing: 0;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-  }
   .nav {
-    margin-top: -3.6em;
+    //margin-top: -3.6em;
     position: fixed;
     display: flex;
     align-items: center;
@@ -35,16 +27,15 @@ export default styled.header`
     .nav__brand {
       text-transform: uppercase;
       font-size: 1.8rem;
+      letter-spacing: 0.15em;
     }
     li {
       list-style: none;
       margin-right: 2vw;
+      font-size: 11px;
+      text-transform: uppercase;
       :first-child {
         display: none;
-      }
-      a {
-        font-size: 11px;
-        text-transform: uppercase;
       }
     }
   }
@@ -58,55 +49,55 @@ export default styled.header`
     background: #6b6a6a;
     transition: 0.1s ease-in;
   }
-  .homme a,
-  .femmes a,
-  .enfants a,
-  .maison a,
-  .cadeaux a,
-  .wor a,
-  .services a,
-  .preferes a,
-  .magasins a,
-  .fr a {
-    transform: translateX(-270%);
+  .homme,
+  .femmes,
+  .enfants,
+  .maison,
+  .cadeaux,
+  .wor,
+  .services,
+  .preferes,
+  .magasins,
+  .fr {
+    transform: translateX(-60%);
   }
-  .nav__active .homme a {
+  .nav__active .homme {
     transform: translateX(0%);
     transition: 0.3s ease-in;
   }
-  .nav__active .femmes a {
+  .nav__active .femmes {
     transform: translateX(0%);
     transition: 0.4s ease-in;
   }
-  .nav__active .enfants a {
+  .nav__active .enfants {
     transform: translateX(0%);
     transition: 0.5s ease-in;
   }
-  .nav__active .maison a {
+  .nav__active .maison {
     transform: translateX(0%);
     transition: 0.6s ease-in;
   }
-  .nav__active .cadeaux a {
+  .nav__active .cadeaux {
     transform: translateX(0%);
     transition: 0.7s ease-in;
   }
-  .nav__active .wor a {
+  .nav__active .wor {
     transform: translateX(0%);
     transition: 0.8s ease-in;
   }
-  .nav__active .services a {
+  .nav__active .services {
     transform: translateX(0%);
     transition: 0.9s ease-in;
   }
-  .nav__active .preferes a {
+  .nav__active .preferes {
     transform: translateX(0%);
     transition: 1s ease-in;
   }
-  .nav__active .magasins a {
+  .nav__active .magasins {
     transform: translateX(0%);
     transition: 1.1s ease-in;
   }
-  .nav__active .fr a {
+  .nav__active .fr {
     transform: translateX(0%);
     transition: 1.2s ease-in;
   }
@@ -154,7 +145,7 @@ export default styled.header`
       top: 8.5vh;
       left: 0;
       height: 92vh;
-      width: 50vw;
+      width: 53vw;
       background: white;
       flex-direction: column;
       transform: translateX(-100%);
@@ -169,12 +160,13 @@ export default styled.header`
         display: flex;
         background-color: #eaecf3;
         height: 7vh;
+        margin-right: 1.9em;
+        padding-right: 1.6em;
         .picto2 {
           width: 7%;
           margin: 2.3vw;
           .sc1 {
             /*sc1 correspond au text de "se connecter" dans la navbar*/
-            margin-left: -1rem;
             font-size: 15px;
           }
         }
@@ -185,32 +177,28 @@ export default styled.header`
         margin-right: 0;
         display: flex;
         align-items: center;
-        a {
-          margin-left: 1rem;
-          text-transform: uppercase;
-          font-size: 13px;
-          color: #363a4e;
-        }
+        margin-left: 1rem;
+        text-transform: uppercase;
+        font-size: 13px;
+        color: #363a4e;
       }
       .footerNav {
         height: 15rem;
         background-color: #041e3a;
         li {
           margin-top: 0.5rem;
-          a {
-            margin-left: 1rem;
-            font-size: 12px;
-            color: #d9dff1;
-            text-transform: none;
-            img {
-              margin-right: 0.5rem;
-              margin-bottom: -0.4rem;
-            }
+          //margin-left: 1rem;
+          font-size: 12px;
+          color: #d9dff1;
+          text-transform: none;
+          img {
+            margin-right: 0.6rem;
           }
         }
         .bleu {
           display: flex;
           background-color: #041e3a;
+          padding-left: 0.2em;
         }
       }
     }

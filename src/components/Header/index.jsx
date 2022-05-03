@@ -37,7 +37,7 @@ export default function Header() {
           <div className='line3'></div>
         </div>
         <Link to='/'>
-          <div className='nav__brand'> Ralph Lauren</div>
+          <div className='nav__brand'> Voili Earth</div>
         </Link>
         <ul className={active}>
           <li className='connect'>
@@ -46,45 +46,29 @@ export default function Header() {
               Se connecter
             </a>
           </li>
-          <li className='homme'>
-            <a href='#'>Hommes</a>
-          </li>
-          <li className='femmes'>
-            <a href='#'>Femmes</a>
-          </li>
+          <li className='homme'>Hommes</li>
+          <li className='femmes'>Femmes</li>
+
           <li className='enfants'>
-            <a href='#'>Enfants</a>
+            <Link to='/Monde'>Monde</Link>
           </li>
-          <li className='maison'>
-            <a href='#'>La maison</a>
-          </li>
-          <li className='cadeaux'>
-            <a href='#'>Cadeaux</a>
-          </li>
-          <li className='wor'>
-            <a href='#'>World of rl</a>
-          </li>
-          <li className='services'>
-            <a href='#'>Services</a>
-          </li>
+
+          <li className='maison'>La maison</li>
+          <li className='cadeaux'>Cadeaux</li>
+          <li className='wor'>World of rl</li>
+          <li className='services'>Services</li>
           <div className='footerNav'>
             <li className='preferes bleu'>
-              <a href='#'>
-                <img src={imgcoeur} alt='imgcoeur' />
-                Préférés
-              </a>
+              <img src={imgcoeur} alt='imgcoeur' />
+              Préférés
             </li>
             <li className='magasins bleu'>
-              <a href='#'>
-                <img src={imgplace} alt='imgplace' />
-                Magasins
-              </a>
+              <img src={imgplace} alt='imgplace' />
+              Magasins
             </li>
             <li className='fr bleu'>
-              <a href='#'>
-                <img src={imgglobe} alt='imgglobe' />
-                FR Français
-              </a>
+              <img src={imgglobe} alt='imgglobe' />
+              FR Français
             </li>
           </div>
         </ul>

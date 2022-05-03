@@ -5,9 +5,9 @@ export default styled.section`
   width: 100vw;
   .main {
     .first_category {
-      margin-top: 3.6em;
       position: relative;
       .img1 {
+        margin-top: 3.6em;
         width: 100%;
         height: 100%;
       }
@@ -22,7 +22,7 @@ export default styled.section`
         .wrapper {
           height: 100%;
           width: 50%;
-          margin-top: 6%;
+          margin-top: 20%;
           .title {
             color: white;
             font-size: 7.5vmin;
@@ -79,7 +79,7 @@ export default styled.section`
           justify-content: center;
           .wrapper {
             width: 100%;
-            margin-top: 0%;
+            margin-top: 6%;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -113,7 +113,7 @@ export default styled.section`
               }
             }
             .center_video {
-              margin-top: 0%;
+              margin-top: -5%;
               width: 30%;
               box-sizing: border-box;
               video {

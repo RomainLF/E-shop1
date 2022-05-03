@@ -122,9 +122,11 @@ export default styled.div`
           flex-direction: column;
           align-items: flex-start;
           li {
+            font-size: 70%;
+            width: 100%;
             img {
               width: 5%;
-              height: 50%;
+              height: 100%;
             }
           }
         }
